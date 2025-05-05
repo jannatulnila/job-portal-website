@@ -1,0 +1,7 @@
+[
+    { 
+        "icon": "💼", "title": "Browse Companies", "description": "Explore top employers hiring now." },
+    { "icon": "🔍", "title": "Find Jobs", "description":" 'View roles that match your skills." },
+    { "icon": "📄", "title": "Read Details", "description": "Understand job requirements and benefits." },
+    { "icon": "🚀", "title": "Apply Directly", "description": "Click and go to the company site to apply" }
+  ]

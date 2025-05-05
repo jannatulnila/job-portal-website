@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logo-job.png';
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
     return (
@@ -16,14 +17,16 @@ const Navbar = () => {
 
             
             <div class="hidden lg:flex flex-none gap-4 items-center">
-                <a href="/home" class="btn btn-ghost btn-sm">Home</a>
-                <a href="/about" class="btn btn-ghost btn-sm">About</a>
-                <a href="/contact" class="btn btn-ghost btn-sm">Contact</a>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/">About</NavLink>
+                <NavLink to="/">Contact</NavLink>
+                
+                
 
                 
                 <div id="auth-links" class="flex gap-2">
-                    <a href="/login" class="btn btn-outline btn-sm">Login</a>
-                    <a href="/register" class="btn btn-primary btn-sm">Register</a>
+                    <Link to="/auth/login" class="btn btn-outline btn-sm">Login</Link>
+                    <Link to="/auth/register" class="btn btn-primary btn-sm">Register</Link>
                 </div>
 
                
