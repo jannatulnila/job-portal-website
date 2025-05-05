@@ -1,0 +1,263 @@
+[
+    {
+      "id": "1",
+      "name": "Tech Innovators Inc.",
+      "logo": "https://i.ibb.co.com/XxmPkzrM/download.jpg",
+      "location": "San Francisco, CA",
+      "website": "https://techinnovations.com/",
+      "industry": "Technology",
+      "jobs": [
+        {
+          "id": "job-001",
+          "title": "Software Engineer",
+          "bannerImage": "https://i.ibb.co.com/v4Y5jq5g/download-8.jpg",
+          "location": "Remote",
+          "salary": "$100,000 - $120,000",
+          "jobType": "Full-time",
+          "description": "Design and implement software solutions to improve user experiences.",
+          "requirements": [
+            "Experience with Python, Java, or C++",
+            "Strong problem-solving and analytical skills",
+            "Familiar with agile methodologies",
+            "Good understanding of system architecture",
+            "Ability to work in a collaborative environment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "GreenTech Solutions",
+      "logo": "https://i.ibb.co.com/wFCt0jn8/download-1.jpg",
+      "location": "Austin, TX",
+      "website": "https://greentechsolutionsgroup.com/",
+      "industry": "Environmental",
+      "jobs": [
+        {
+          "id": "job-002",
+          "title": "Environmental Analyst",
+          "bannerImage": "https://i.ibb.co.com/Q36qhdsg/download.jpg",
+          "location": "Austin, TX",
+          "salary": "$60,000 - $80,000",
+          "jobType": "Full-time",
+          "description": "Analyze environmental data to develop sustainable solutions.",
+          "requirements": [
+            "Bachelor's degree in Environmental Science or related field",
+            "Experience with environmental data analysis tools",
+            "Strong attention to detail",
+            "Excellent written and verbal communication skills",
+            "Knowledge of environmental regulations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Creative Studios",
+      "logo": "https://i.ibb.co.com/8gGTNmWN/download-2.jpg",
+      "location": "New York, NY",
+      "website": "https://www.creativewebsitestudios.com/",
+      "industry": "Media & Entertainment",
+      "jobs": [
+        {
+          "id": "job-003",
+          "title": "Graphic Designer",
+          "bannerImage": "https://i.ibb.co.com/99KHd7Pj/download-1.jpg",
+          "location": "New York, NY",
+          "salary": "$55,000 - $70,000",
+          "jobType": "Full-time",
+          "description": "Create visually engaging graphics for various media platforms.",
+          "requirements": [
+            "Proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
+            "Strong portfolio of design work",
+            "Good understanding of typography and layout principles",
+            "Creative thinking and problem-solving abilities",
+            "Ability to meet deadlines and handle multiple projects"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Global Consulting Group",
+      "logo": "https://i.ibb.co.com/JjwPgQz8/download-3.jpg",
+      "location": "Chicago, IL",
+      "website": "https://www.gcg.org.au/",
+      "industry": "Consulting",
+      "jobs": [
+        {
+          "id": "job-004",
+          "title": "Business Consultant",
+          "bannerImage": "https://i.ibb.co.com/609kdLxN/download-2.jpg",
+          "location": "Chicago, IL",
+          "salary": "$90,000 - $110,000",
+          "jobType": "Full-time",
+          "description": "Provide strategic advice and analysis to help businesses improve performance.",
+          "requirements": [
+            "MBA or related business degree",
+            "Experience in consulting or management roles",
+            "Strong analytical and research skills",
+            "Excellent communication and presentation skills",
+            "Ability to work under pressure and meet deadlines"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "AutoWorks Corp.",
+      "logo": "https://i.ibb.co.com/twDwmmxj/download.png",
+      "location": "Detroit, MI",
+      "website": "https://www.corporate-autoworks.com/",
+      "industry": "Automotive",
+      "jobs": [
+        {
+          "id": "job-005",
+          "title": "Mechanical Engineer",
+          "bannerImage": "https://i.ibb.co.com/xt1T3pbS/download-3.jpg",
+          "location": "Detroit, MI",
+          "salary": "$80,000 - $100,000",
+          "jobType": "Full-time",
+          "description": "Design and develop innovative automotive solutions for better performance.",
+          "requirements": [
+            "Bachelor's degree in Mechanical Engineering",
+            "Experience with CAD software",
+            "Strong knowledge of automotive systems",
+            "Excellent problem-solving skills",
+            "Ability to work in a fast-paced environment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Foodie Enterprises",
+      "logo": "https://i.ibb.co.com/60Wtz1vM/download-4.jpg",
+      "location": "Los Angeles, CA",
+      "website": "https://foodibd.com/",
+      "industry": "Food & Beverage",
+      "jobs": [
+        {
+          "id": "job-006",
+          "title": "Chef",
+          "bannerImage": "https://i.ibb.co.com/RTz1VpQm/download-4.jpg",
+          "location": "Los Angeles, CA",
+          "salary": "$45,000 - $60,000",
+          "jobType": "Full-time",
+          "description": "Create delicious dishes that represent our brand and attract customers.",
+          "requirements": [
+            "Culinary degree or equivalent experience",
+            "Experience in high-end restaurants or catering",
+            "Strong attention to detail",
+            "Ability to work under pressure",
+            "Creativity in dish presentation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "MedTech Solutions",
+      "logo": "https://i.ibb.co.com/MwmFrTz/download-5.jpg",
+      "location": "Boston, MA",
+      "website": "https://medtechsolutions.com/",
+      "industry": "Healthcare",
+      "jobs": [
+        {
+          "id": "job-007",
+          "title": "Medical Device Engineer",
+          "bannerImage": "https://i.ibb.co.com/gbNkZb4F/download-5.jpg",
+          "location": "Boston, MA",
+          "salary": "$85,000 - $105,000",
+          "jobType": "Full-time",
+          "description": "Design and test cutting-edge medical devices for patient care.",
+          "requirements": [
+            "Bachelor's degree in Biomedical Engineering or related field",
+            "Experience with medical device development",
+            "Strong understanding of FDA regulations",
+            "Excellent teamwork and communication skills",
+            "Ability to troubleshoot technical issues"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "FinTech Innovations",
+      "logo": "https://i.ibb.co.com/BVrkpGhZ/download-6.jpg",
+      "location": "New York, NY",
+      "website": "https://www.fintechinnovations.com/",
+      "industry": "Financial Technology",
+      "jobs": [
+        {
+          "id": "job-008",
+          "title": "Data Analyst",
+          "bannerImage": "https://i.ibb.co.com/MymPP8Yg/download-6.jpg",
+          "location": "New York, NY",
+          "salary": "$70,000 - $90,000",
+          "jobType": "Full-time",
+          "description": "Analyze financial data to support decision-making and strategic planning.",
+          "requirements": [
+            "Strong proficiency in SQL and Excel",
+            "Experience with data visualization tools",
+            "Knowledge of financial markets and trends",
+            "Excellent analytical and problem-solving skills",
+            "Ability to communicate insights clearly"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "EduCare Solutions",
+      "logo": "https://i.ibb.co.com/4wCKdzsC/download-1.png",
+      "location": "Seattle, WA",
+      "website": "https://educaresolution.in/",
+      "industry": "Education Technology",
+      "jobs": [
+        {
+          "id": "job-009",
+          "title": "Instructional Designer",
+          "bannerImage": "https://i.ibb.co.com/JRKkz7K2/download-7.jpg",
+          "location": "Seattle, WA",
+          "salary": "$65,000 - $85,000",
+          "jobType": "Full-time",
+          "description": "Design engaging e-learning content and training programs.",
+          "requirements": [
+            "Experience with instructional design software",
+            "Strong knowledge of adult learning principles",
+            "Ability to work with subject matter experts",
+            "Excellent project management skills",
+            "Ability to create accessible learning experiences"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "RetailTech Solutions",
+      "logo": "https://i.ibb.co.com/5g8S0DN3/download-7.jpg",
+      "location": "Miami, FL",
+      "website": "https://retailtechsolution.com/",
+      "industry": "Retail Technology",
+      "jobs": [
+        {
+          "id": "job-010",
+          "title": "Product Manager",
+          "bannerImage": "https://i.ibb.co.com/3yPCcVS7/product-manager-work-minimal-infographic-banner-vector-30680359.jpg",
+          "location": "Miami, FL",
+          "salary": "$95,000 - $115,000",
+          "jobType": "Full-time",
+          "description": "Manage the product lifecycle and lead cross-functional teams to deliver innovative retail solutions.",
+          "requirements": [
+            "Experience in product management",
+            "Strong understanding of the retail industry",
+            "Excellent communication and leadership skills",
+            "Experience with agile project management",
+            "Ability to analyze and act on customer feedback"
+          ]
+        }
+      ]
+    }
+  ]
+  
