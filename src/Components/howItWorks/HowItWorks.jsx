@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const HowItWorks = ({data}) => {
-    console.log(data)
+    // console.log(data)
     
     return (
         <section className="py-12 px-4">

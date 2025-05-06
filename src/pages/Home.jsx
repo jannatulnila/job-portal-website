@@ -1,12 +1,16 @@
 import React from 'react';
-import HowItWorks from '../Components/howItWorks/HowItWorks';
+import Companies from '../Components/Companies/Companies';
 import { useLoaderData } from 'react-router';
+import CompanyDetails from './CompanyDetails';
+
+
 
 const Home = () => {
-    const data = useLoaderData();
+    const companies = useLoaderData();
+    console.log(companies);
     return (
         <div>
-            <HowItWorks data={data}></HowItWorks>
+            
         </div>
     );
 };

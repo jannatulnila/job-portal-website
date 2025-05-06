@@ -6,27 +6,31 @@ import Profile from "../pages/Profile";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AuthLayout from "../Layouts/AuthLayout";
+import Companies from "../Components/Companies/Companies";
 
 const router = createBrowserRouter(
     [
         {
             path:"/",
             element:<HomeLayout></HomeLayout>,
-           
+            loader:()=>fetch("/howItWorks.json"),
             children:[
                 {
                     path:"",
                     element:<Home></Home>,
-                    loader:()=>fetch("/public/howItWorks.json"),
+                    loader:()=>fetch("/job.json"),
                 },
                 {
                     path:"/company/:id",
-                    element:<CompanyDetails></CompanyDetails>
-                },
-                {
-                    path:"/profile",
-                    element:<Profile></Profile>
-                },
+                    element:<Companies></Companies>,
+                     
+                 },
+                 {
+                    path:"company/:companyId",
+                    element:<CompanyDetails></CompanyDetails>,
+                    loader:()=>fetch("/job.json"),
+                 }
+               
                 
             ]
         },
@@ -42,8 +46,15 @@ const router = createBrowserRouter(
                     path:"/auth/register",
                     element:<Register></Register>
                 },
+                {
+                    path:"/auth/profile",
+                    element:<Profile></Profile>
+                },
+               
             ]
         },
+        
+      
         {
             path:"/jobs",
             element:<h2>jobs layout</h2>

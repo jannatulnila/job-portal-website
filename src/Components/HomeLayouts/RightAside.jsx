@@ -1,9 +1,10 @@
 import React from 'react';
+import Companies from '../Companies/Companies';
 
 const RightAside = () => {
     return (
         <div>
-            RightAside
+            <Companies></Companies>
         </div>
     );
 };

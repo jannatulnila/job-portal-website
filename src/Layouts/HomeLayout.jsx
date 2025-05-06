@@ -1,15 +1,15 @@
 import React from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useLoaderData } from 'react-router';
 import Navbar from '../Components/Header/Navbar';
 import Header from '../Components/Header/Header';
 import Footer from '../Components/Footer/Footer';
 
-import LeftAside from '../Components/HomeLayouts/LeftAside';
 import RightAside from '../Components/HomeLayouts/RightAside';
+import HowItWorks from '../Components/howItWorks/HowItWorks';
 
 
 const HomeLayout = () => {
-    
+    const data = useLoaderData();
     return (
         <div>
             <header className='w-11/12 mx-auto mt-2'>
@@ -17,7 +17,7 @@ const HomeLayout = () => {
                 <Header></Header>
             </header>
             <main className='w-11/12 mx-auto my-3'>
-                <aside><LeftAside></LeftAside></aside>
+                <aside> <HowItWorks data={data}></HowItWorks></aside>
                
                 <section className='main'>
                     <Outlet></Outlet>
