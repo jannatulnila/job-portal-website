@@ -55,24 +55,28 @@ const Navbar = () => {
                 )}
 
 
-                <div id="user-profile" class="hidden">
-                    <div class="dropdown dropdown-end">
-                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                            <div class="w-10 rounded-full">
-                                <img id="profile-pic" src="" alt="Profile" />
-                            </div>
-                        </label>
-                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><Link to="/auth/profile">My Profile</Link></li>
-                            <li><Link to="/logout">Logout</Link></li>
-                        </ul>
-                    </div>
-                </div>
 
             </div>
 
 
-            <div class="dropdown dropdown-end lg:hidden">
+
+                {user ? (
+                    <>
+                        <div className="dropdown dropdown-end lg:hidden">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar lg:hidden">
+                                <div className="lg:hidden w-10 rounded-full ">
+                                    <img  src={user.photoURL || '/auth/profile'} alt="Profile" />
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                                <li><Link to="/auth/profile">My Profile</Link></li>
+                                <li><button onClick={handleLogOut}>Logout</button></li>
+                            </ul>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                       <div class="dropdown dropdown-end lg:hidden">
                 <label tabindex="0" class="btn btn-ghost btn-circle">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor">
@@ -80,22 +84,21 @@ const Navbar = () => {
                             d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </label>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-56">
-                    <li><NavLink to="/home">Home</NavLink></li>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-56  ">
+
+                        <li><NavLink to="/home">Home</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
-
-
-                    <div id="mobile-auth-links" class="flex flex-col gap-1 mt-2">
-                        <Link to="/login" class="btn btn-outline btn-sm">Login</Link>
-                        <Link to="/register" class="btn btn-primary btn-sm">Register</Link>
-                    </div>
-                    <div id="mobile-user-profile" class="hidden mt-2">
-                        <Link to="/auth/profile" class="btn btn-ghost btn-sm">My Profile</Link>
-                        <Link to="/logout" class="btn btn-ghost btn-sm">Logout</Link>
-                    </div>
-                </ul>
+                        <Link to="/auth/login" className="btn btn-outline btn-sm">Login</Link>
+                        <Link to="/auth/register" className="btn btn-primary btn-sm">Register</Link>
+                        </ul>
             </div>
+                    </>
+                )}
+
+                    
+
+          
         </div>
 
     );

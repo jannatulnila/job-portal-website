@@ -48,7 +48,8 @@ const router = createBrowserRouter(
                 },
                 {
                     path:"/auth/profile",
-                    element:<Profile></Profile>
+                    element:<Profile></Profile>,
+                    loader:()=>fetch("/job.json"),
                 },
                
             ]

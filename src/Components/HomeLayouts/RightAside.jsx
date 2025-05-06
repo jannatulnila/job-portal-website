@@ -4,7 +4,7 @@ import Companies from '../Companies/Companies';
 const RightAside = () => {
     return (
         <div>
-            <Companies></Companies>
+            
         </div>
     );
 };
