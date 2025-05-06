@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AuthLayout from "../Layouts/AuthLayout";
 import Companies from "../Components/Companies/Companies";
+import ForgetPassword from "../pages/ForgetPassword";
 
 const router = createBrowserRouter(
     [
@@ -20,18 +21,12 @@ const router = createBrowserRouter(
                     element:<Home></Home>,
                     loader:()=>fetch("/job.json"),
                 },
+               
                 {
                     path:"/company/:id",
                     element:<Companies></Companies>,
-                     
-                 },
-                 {
-                    path:"company/:companyId",
-                    element:<CompanyDetails></CompanyDetails>,
-                    loader:()=>fetch("/job.json"),
-                 }
-               
                 
+                 },    
             ]
         },
         {
@@ -47,6 +42,10 @@ const router = createBrowserRouter(
                     element:<Register></Register>
                 },
                 {
+                   path:"/auth/forgetPassword",
+                   element:<ForgetPassword></ForgetPassword>
+                },
+                {
                     path:"/auth/profile",
                     element:<Profile></Profile>,
                     loader:()=>fetch("/job.json"),
@@ -54,7 +53,11 @@ const router = createBrowserRouter(
                
             ]
         },
-        
+        {
+            path:"/companyDetails",
+            element:<CompanyDetails></CompanyDetails>,
+            loader:()=>fetch("/job.json"),
+         },
       
         {
             path:"/jobs",
