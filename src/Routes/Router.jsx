@@ -8,6 +8,7 @@ import Register from "../pages/Register";
 import AuthLayout from "../Layouts/AuthLayout";
 import Companies from "../Components/Companies/Companies";
 import ForgetPassword from "../pages/ForgetPassword";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter(
     [
@@ -65,7 +66,7 @@ const router = createBrowserRouter(
         },
         {
             path:"/*",
-            element:<h2>error404</h2>
+            element:<ErrorPage></ErrorPage>
         },
     ]
 )

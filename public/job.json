@@ -105,6 +105,22 @@
             "Excellent communication and presentation skills",
             "Ability to work under pressure and meet deadlines"
           ]
+        },
+        {
+          "id": "job-005",
+          "title": "Data Analyst",
+          "bannerImage": "https://i.ibb.co.com/Vq3nqXY/download-4.jpg",
+          "location": "Chicago, IL",
+          "salary": "$75,000 - $95,000",
+          "jobType": "Full-time",
+          "job-description": "Analyze business data to provide insights and support strategic decisions for clients.",
+          "requirements": [
+            "Bachelor's degree in Data Science, Statistics, or related field",
+            "Proficiency in data analysis tools (Excel, SQL, Python, etc.)",
+            "Experience with data visualization platforms (Tableau, Power BI)",
+            "Strong problem-solving and critical thinking skills",
+            "Ability to communicate complex data in a clear way"
+          ]
         }
       ]
     },
@@ -118,9 +134,9 @@
       "industry": "Automotive",
       "jobs": [
         {
-          "id": "job-005",
+          "id": "job-006",
           "title": "Mechanical Engineer",
-          "bannerImage": "https://i.ibb.co.com/xt1T3pbS/download-3.jpg",
+          "bannerImage": "https://i.ibb.co.com/5X7QWhzF/images.jpg",
           "location": "Detroit, MI",
           "salary": "$80,000 - $100,000",
           "jobType": "Full-time",
@@ -145,7 +161,7 @@
       "industry": "Food & Beverage",
       "jobs": [
         {
-          "id": "job-006",
+          "id": "job-007",
           "title": "Chef",
           "bannerImage": "https://i.ibb.co.com/RTz1VpQm/download-4.jpg",
           "location": "Los Angeles, CA",
@@ -172,7 +188,7 @@
       "industry": "Healthcare",
       "jobs": [
         {
-          "id": "job-007",
+          "id": "job-008",
           "title": "Medical Device Engineer",
           "bannerImage": "https://i.ibb.co.com/gbNkZb4F/download-5.jpg",
           "location": "Boston, MA",
@@ -199,7 +215,7 @@
       "industry": "Financial Technology",
       "jobs": [
         {
-          "id": "job-008",
+          "id": "job-009",
           "title": "Data Analyst",
           "bannerImage": "https://i.ibb.co.com/MymPP8Yg/download-6.jpg",
           "location": "New York, NY",
@@ -226,7 +242,7 @@
       "industry": "Education Technology",
       "jobs": [
         {
-          "id": "job-009",
+          "id": "job-010",
           "title": "Instructional Designer",
           "bannerImage": "https://i.ibb.co.com/JRKkz7K2/download-7.jpg",
           "location": "Seattle, WA",
@@ -253,7 +269,7 @@
       "industry": "Retail Technology",
       "jobs": [
         {
-          "id": "job-010",
+          "id": "job-011",
           "title": "Product Manager",
           "bannerImage": "https://i.ibb.co.com/3yPCcVS7/product-manager-work-minimal-infographic-banner-vector-30680359.jpg",
           "location": "Miami, FL",

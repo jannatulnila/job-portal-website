@@ -1,8 +1,9 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-200 text-base-content flex justify-around mt-12">
+        <footer className="footer p-10 bg-base-200 text-base-content  lg:flex justify-around mt-12">
             <div >
                 <span className="footer-title">Jobs Portal</span>
                 <a className="link link-hover">Browse Companies</a>
@@ -13,10 +14,19 @@ const Footer = () => {
 
             <div>
                 <span className="footer-title">Company</span>
-                <a className="link link-hover">About Us</a>
-                <a className="link link-hover">Contact</a>
-                <a className="link link-hover">Careers</a>
-                <a className="link link-hover">Blog</a>
+                
+                <NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                }  to="/">Home</NavLink>
+                <NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                }  to="/about">About</NavLink>
+                <NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                }  to="/contact">Contact</NavLink>
+                <NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                }  to="/companyDetails">CompanyDetails</NavLink>
             </div>
 
             <div>

@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import logo from '../../assets/logo-job.png';
+import logo from '../../assets/job.png';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../Provider/AuthProvider';
 
@@ -22,17 +22,25 @@ const Navbar = () => {
                 <div className='flex items-center gap-0'>
                     <img className='w-12' src={logo} alt="" />
 
-                    <Link to="/" className="text-3xl font-bold text-blue-500 ">Portal</Link>
+                    <Link to="/" className="text-3xl font-bold text-blue-500 " >Portal</Link>
                 </div>
 
             </div>
 
             <div className='mr-2 text-white'>{user && user.email}</div>
             <div class="hidden lg:flex flex-none gap-4 items-center">
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/">About</NavLink>
-                <NavLink to="/">Contact</NavLink>
-                <NavLink to="/companyDetails">CompanyDetails</NavLink>
+                <NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                } to="/">Home</NavLink>
+                <NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                }   to="/about">About</NavLink>
+                <NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                }  to="/contact">Contact</NavLink>
+                <NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                } to="/companyDetails">CompanyDetails</NavLink>
 
                 {user ? (
                     <>
@@ -70,10 +78,18 @@ const Navbar = () => {
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><NavLink to="/">Home</NavLink></li>
-                            <li><NavLink to="/about">About</NavLink></li>
-                            <li><NavLink to="/contact">Contact</NavLink></li>
-                            <NavLink to="/companyDetails">CompanyDetails</NavLink>
+                            <li><NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                }  to="/">Home</NavLink></li>
+                            <li><NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                }  to="/about">About</NavLink></li>
+                            <li><NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                }  to="/contact">Contact</NavLink></li>
+                            <NavLink className={({ isActive }) =>
+                    isActive ? "text-blue-500 font-bold" : "text-black"
+                }  to="/companyDetails">CompanyDetails</NavLink>
                             <li><Link to="/auth/profile">My Profile</Link></li>
                             <li><button onClick={handleLogOut}>Logout</button></li>
                         </ul>
