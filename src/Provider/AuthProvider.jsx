@@ -7,12 +7,15 @@ export const AuthContext = createContext();
 
 const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
-    const emailRef=useRef()
-    const [user, setUser] = useState(null)
-    const provider = new GoogleAuthProvider()
+    const emailRef=useRef();
+    const [user, setUser] = useState(null);
+    const provider = new GoogleAuthProvider();
+    const [loading, setLoading]= useState(true);
     
+    console.log(user, loading)
 
     const createUser= (email, password)=>{
+        setLoading(true);
        return createUserWithEmailAndPassword(auth, email,password);
     }
     
@@ -25,6 +28,7 @@ const AuthProvider = ({ children }) => {
     }
 
     const signIn=(email,password)=>{
+        setLoading(true)
         return signInWithEmailAndPassword(auth,email,password)
     }
     const forgetPassword =(email)=>{
@@ -35,12 +39,19 @@ const AuthProvider = ({ children }) => {
     const hadleGoogleSignIn=()=>{
         signInWithPopup(auth, provider);
      }
+
+     const updatedProfile =(name,photoURL)=>{
+       return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photoURL
+          })
+          
+     }
  
 
     useEffect(()=>{
-    const unsubscribe=   onAuthStateChanged(auth,(currentUser)=>{
-
+    const unsubscribe= onAuthStateChanged(auth,(currentUser)=>{
         setUser(currentUser)
+        setLoading(false)
        });
        return()=>{
         unsubscribe();
@@ -56,7 +67,10 @@ const AuthProvider = ({ children }) => {
         updateUser,
         hadleGoogleSignIn,
         emailRef,
-        forgetPassword
+        forgetPassword,
+        updatedProfile,
+        loading,
+        setLoading
     }
   
     return <AuthContext value={authData}>

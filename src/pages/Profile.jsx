@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
+import { useNavigate } from 'react-router';
 
 const Profile = () => {
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate()
 
     if (!user) {
         return (
@@ -29,6 +31,7 @@ const Profile = () => {
                     <ul className="list-disc list-inside text-gray-700">
                         <li>Account Status: {user.status || 'Active'}</li>
                     </ul>
+                    <button onClick={()=>navigate("/auth/updateProfile")} className='btn btn-primary hover:bg-primary'>UpdateInformation</button>
                 </div>
             </div>
         </div>

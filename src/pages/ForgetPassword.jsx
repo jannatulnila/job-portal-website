@@ -13,6 +13,7 @@ const ForgetPassword = () => {
     useEffect(() => {
         if (location.state?.email) {
             emailRef.current.value = location.state.email;
+            window.location.href = "https://mail.google.com/";
         }
 
     }, [location.state]);
@@ -53,7 +54,7 @@ const ForgetPassword = () => {
                                 <label className="label">Email</label>
                                 <input type="email" ref={emailRef} className="input w-full" placeholder="Enter your email" />
                             </div>
-                            <button type='submit' className="btn btn-primary w-full">Reset Password</button>
+                            <button type='submit'  className="btn btn-primary w-full">Reset Password</button>
                         </form>
                     </>
                 )}

@@ -9,6 +9,8 @@ import AuthLayout from "../Layouts/AuthLayout";
 import Companies from "../Components/Companies/Companies";
 import ForgetPassword from "../pages/ForgetPassword";
 import ErrorPage from "../pages/ErrorPage";
+import UpdateProfile from "../pages/updateProfile";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 const router = createBrowserRouter(
     [
@@ -51,13 +53,19 @@ const router = createBrowserRouter(
                     element:<Profile></Profile>,
                     loader:()=>fetch("/job.json"),
                 },
+                {
+                    path:"/auth/updateProfile",
+                    element:<UpdateProfile></UpdateProfile>
+                }
                
             ]
         },
         {
             path:"/companyDetails",
-            element:<CompanyDetails></CompanyDetails>,
+            element:<PrivateRoute>
+                <CompanyDetails></CompanyDetails></PrivateRoute>,
             loader:()=>fetch("/job.json"),
+            
          },
       
         {

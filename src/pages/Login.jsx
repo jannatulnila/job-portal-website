@@ -1,9 +1,12 @@
-import React, { use } from 'react';
-import { Link, useNavigate } from 'react-router';
+import React, { use, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
+  const [error, setError] = useState("");
   const navigate = useNavigate();
+  const location = useLocation()
+  console.log(location);
   const { signIn, hadleGoogleSignIn, emailRef } = use(AuthContext);
 
  
@@ -18,12 +21,12 @@ const handleLogin = (e) => {
   signIn(email, password).then(result => {
     const user = result.user;
     console.log(user);
-    navigate("/")
+    navigate(`${location.state ? location.state : "/"}`)
   })
     .catch((error) => {
       const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(errorCode, errorMessage)
+      
+      setError(errorCode)
     });
 }
 const handleGoogleSignIn = (e) => {
@@ -53,11 +56,13 @@ return (
         <fieldset className="fieldset">
           {/* email */}
           <label className="label">Email</label>
-          <input type="email" ref={emailRef} name='email' className="input" placeholder="Email" />
+          <input type="email" ref={emailRef} name='email' className="input" placeholder="Email" required />
           {/* password */}
           <label className="label">Password</label>
-          <input type="password" name='password' className="input" placeholder="Password" />
+          <input type="password" name='password' className="input" placeholder="Password" required/>
           <div onClick={handleForgetPassword}><a className="link link-hover">Forgot password?</a></div>
+
+          {error && <p className='text-red-500 text-sm'> {error} </p>}
 
           <button type='submit' className="btn btn-primary mt-4">Login</button>
           {/* Google */}

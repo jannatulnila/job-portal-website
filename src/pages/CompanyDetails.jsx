@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 const CompanyDetails = () => {
     const companyData = useLoaderData();
-    console.log(companyData);
     const [selectJob, setSelectJob] = useState(null);
 
     const openModal = (job) => {
