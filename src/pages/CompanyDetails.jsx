@@ -22,7 +22,7 @@ const CompanyDetails = () => {
 
             {companyData.map((company) => (
 
-                <div className='p-4 max-w-4xl  mx-auto border border-gray-200 mt-5 shadow-sm rounded-xl'>
+                <div key={company.id} className='p-4 max-w-4xl  mx-auto border border-gray-200 mt-5 shadow-sm rounded-xl'>
 
                     <div className="flex items-center gap-5 mb-6 ">
                         <img className='w-18 h-18 object-contain'

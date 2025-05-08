@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
     const provider = new GoogleAuthProvider();
     const [loading, setLoading]= useState(true);
     
-    console.log(user, loading)
+    // console.log(user, loading)
 
     const createUser= (email, password)=>{
         setLoading(true);

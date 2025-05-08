@@ -6,7 +6,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 const Navbar = () => {
     const { user, logOut } = use(AuthContext);
     const handleLogOut = () => {
-        console.log("user tying to log out")
+    
         logOut().then(() => {
             alert("you logged out succesfully")
         }).catch((error) => {
@@ -15,10 +15,10 @@ const Navbar = () => {
     }
     return (
 
-        <div class=" navbar bg-base-100 ">
+        <div className=" navbar bg-base-100 ">
 
 
-            <div class="flex-1 ">
+            <div className="flex-1 ">
                 <div className='flex items-center gap-0'>
                     <img className='w-12' src={logo} alt="" />
 
@@ -28,7 +28,7 @@ const Navbar = () => {
             </div>
 
             <div className='mr-2 text-white'>{user && user.email}</div>
-            <div class="hidden lg:flex flex-none gap-4 items-center">
+            <div className="hidden lg:flex flex-none gap-4 items-center">
                 <NavLink className={({ isActive }) =>
                     isActive ? "text-blue-500 font-bold" : "text-black"
                 } to="/">Home</NavLink>
@@ -97,15 +97,15 @@ const Navbar = () => {
                 </>
             ) : (
                 <>
-                    <div class="dropdown dropdown-end lg:hidden">
-                        <label tabindex="0" class="btn btn-ghost btn-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                    <div className="dropdown dropdown-end lg:hidden">
+                        <label tabindex="0" className="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </label>
-                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-56  ">
+                        <ul tabindex="0" className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-56  ">
 
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/about">About</NavLink></li>

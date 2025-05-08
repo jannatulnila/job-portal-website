@@ -11,6 +11,7 @@ import ForgetPassword from "../pages/ForgetPassword";
 import ErrorPage from "../pages/ErrorPage";
 import UpdateProfile from "../pages/updateProfile";
 import PrivateRoute from "../Provider/PrivateRoute";
+import Loading from "../pages/Loading";
 
 const router = createBrowserRouter(
     [
@@ -18,11 +19,13 @@ const router = createBrowserRouter(
             path:"/",
             element:<HomeLayout></HomeLayout>,
             loader:()=>fetch("/howItWorks.json"),
+            hydrateFallbackElement:<Loading></Loading>,
             children:[
                 {
                     path:"",
                     element:<Home></Home>,
                     loader:()=>fetch("/job.json"),
+                    hydrateFallbackElement:<Loading></Loading>
                 },
                
                 {
@@ -52,6 +55,7 @@ const router = createBrowserRouter(
                     path:"/auth/profile",
                     element:<Profile></Profile>,
                     loader:()=>fetch("/job.json"),
+                    hydrateFallbackElement:<Loading></Loading>
                 },
                 {
                     path:"/auth/updateProfile",
@@ -67,11 +71,6 @@ const router = createBrowserRouter(
             loader:()=>fetch("/job.json"),
             
          },
-      
-        {
-            path:"/jobs",
-            element:<h2>jobs layout</h2>
-        },
         {
             path:"/*",
             element:<ErrorPage></ErrorPage>

@@ -13,13 +13,13 @@ const Register = () => {
 
        
 
-        console.log(e.target);
+        // console.log(e.target);
         const form = e.target;
         const name = form.name.value;
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log({name,photo, email, password});
+        // console.log({name,photo, email, password});
 
         setSuccess(false);
 
@@ -60,7 +60,7 @@ const Register = () => {
             navigate("/");
         })
         .catch((error) => {
-            const errorCode = error.code;
+        
             const errorMessage = error.message;
             // alert(errorMessage);
             setErrorMessage(errorMessage);
